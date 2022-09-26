@@ -1,0 +1,5 @@
+/* mumu */
+.math-block > mjx-container[jax="CHTML"]  {
+  font-size: 120%;
+  /* text-align: left !important; */
+}
