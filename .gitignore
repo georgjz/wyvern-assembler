@@ -1,2 +1,4 @@
 compiled/
-*.exe
+# *.css
+*.json
+workspace
