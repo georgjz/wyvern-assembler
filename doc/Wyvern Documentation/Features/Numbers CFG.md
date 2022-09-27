@@ -1,4 +1,4 @@
-Arithmetic expressions in Wyvern support addition, subtraction, multiplication, division, and unary subtraction/negation. Parenthesized expressions have highest precedence, multiplication and division lower precedence, addition and subtraction lowest precedence.
+Wyvern supports number expressed in decimal, hexadecimal, octal, and binary notation.
 
 $$
 \begin{alignat*}{3}
@@ -23,5 +23,3 @@ $$
 
 \end{alignat*}
 $$
-
-$Number$ refers to any [[Numbers CFG|legal number expression]], $\texttt{id}$ any legal [[identifier]].
