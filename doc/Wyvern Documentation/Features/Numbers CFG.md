@@ -6,20 +6,25 @@ $$
 \def\pro{{\quad \to \quad}}
 \def\or{{\quad \; \mid \quad }}
 
-&AExpr              &&\pro &&Expr \\
+&Number             &&\pro &&HexNumber  \\
+&                   &&\or  &&DecNumber  \\
+&                   &&\or  &&OctNumber  \\
+&                   &&\or  &&BinNumber  \\
 \\
-&Expr               &&\pro &&Expr \quad \T{+} \quad Term  \\
-&                   &&\or  &&Expr \quad \T{-} \quad Term  \\
-&                   &&\or  &&Term  \\
+&HexNumber          &&\pro &&\T{\$} \quad HexDigit^+   \\
+&                   &&\or  &&HexDigit^{+} \quad \T{h} \\
 \\
-&Term               &&\pro &&Term \quad \T{*} \quad Factor  \\
-&                   &&\or  &&Term \quad \T{/} \quad Factor  \\
-&                   &&\or  &&Factor  \\
+&DecNumber          &&\pro &&Digit^{+} \\
 \\
-&Factor             &&\pro &&\T{\lparen} \quad Expr \quad \T{\rparen}  \\
-&                   &&\or  &&\T{-} Factor  \\
-&                   &&\or  &&Number  \\
-&                   &&\or  &&\T{id}  \\
+&OctNumber          &&\pro &&OctDigit^{+} \quad \T{o}  \\
+\\
+&BinNumber          &&\pro &&\T{\%} \quad BinDigit^{+}  \\
+&                   &&\or  &&BinDigit^{+} \quad \T{b}  \\
+\\
+&HexDigit           &&\pro &&\T{[a-fA-F]} \or Digit  \\
+&Digit              &&\pro &&\T{9} \or \T{8} \or OctDigit  \\
+&OctDigit           &&\pro &&\T{7} \or \T{6} \or \T{5} \or \T{4} \or \T{3} \or \T{2} \or BinDigit  \\
+&BinDigit           &&\pro &&\T{1} \or \T{0}  \\
 
 \end{alignat*}
 $$
