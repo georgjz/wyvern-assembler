@@ -11,19 +11,27 @@ $$
 &                   &&\or  &&OctNumber  \\
 &                   &&\or  &&BinNumber  \\
 \\
-&HexNumber          &&\pro &&\T{\$} \quad HexDigit^+   \\
-&                   &&\or  &&HexDigit^{+} \quad \T{h} \\
+
+&HexNumber          &&\pro &&\T{hexprefix} \quad HexDigit^+   \\
+&                   &&\or  &&HexDigit^{+} \quad \T{hexpostfix} \\
 \\
+
 &DecNumber          &&\pro &&Digit^{+} \\
 \\
-&OctNumber          &&\pro &&OctDigit^{+} \quad \T{o}  \\
+
+&OctNumber          &&\pro &&OctDigit^{+} \quad \T{octpostfix}  \\
 \\
-&BinNumber          &&\pro &&\T{\%} \quad BinDigit^{+}  \\
-&                   &&\or  &&BinDigit^{+} \quad \T{b}  \\
+
+&BinNumber          &&\pro &&\T{binprefix} \quad BinDigit^{+}  \\
+&                   &&\or  &&BinDigit^{+} \quad \T{binpostfix}  \\
 \\
+
 &HexDigit           &&\pro &&\T{[a-fA-F]} \or Digit  \\
+
 &Digit              &&\pro &&\T{9} \or \T{8} \or OctDigit  \\
+
 &OctDigit           &&\pro &&\T{7} \or \T{6} \or \T{5} \or \T{4} \or \T{3} \or \T{2} \or BinDigit  \\
+
 &BinDigit           &&\pro &&\T{1} \or \T{0}  \\
 
 \end{alignat*}
