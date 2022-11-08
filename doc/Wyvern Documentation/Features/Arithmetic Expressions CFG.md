@@ -1,10 +1,10 @@
 Arithmetic expressions in Wyvern support addition, subtraction, multiplication, division, and unary subtraction/negation. Parenthesized expressions have highest precedence, multiplication and division lower precedence, addition and subtraction lowest precedence.
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad }}
 
 &AExpr              &&\pro &&Expr \\
 \\

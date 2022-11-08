@@ -1,10 +1,10 @@
 Wyvern supports number expressed in decimal, hexadecimal, octal, and binary notation.
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad }}
 
 &Number             &&\pro &&HexNumber  \\
 &                   &&\or  &&DecNumber  \\
