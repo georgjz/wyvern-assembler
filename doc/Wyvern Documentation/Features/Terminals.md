@@ -1,9 +1,10 @@
 These are the terminals shared by the different architectures
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{2}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
 
 &\T{bytedecl}       &&\pro \text{db, byte}  \\
 &\T{worddecl}       &&\pro \text{dw, word}  \\

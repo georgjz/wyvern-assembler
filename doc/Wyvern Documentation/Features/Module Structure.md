@@ -1,10 +1,10 @@
 A module resides in a single file. It has a module header and a code block. If the export list is omitted, all symbols from the module are exported. If the parentheses are empty, no symbols are exported.
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &Module             &&\pro &&ModuleHeader \quad Body \quad \T{eof}  \\
 \\
@@ -27,10 +27,10 @@ $$
 A module's body is made up of import statements and/or code blocks, or it is empty. Import statements must precede code blocks:
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &Body               &&\pro &&ImportStmts \quad CodeBlocks  \\
 &                   &&\or  &&ImportStmts  \\
@@ -52,17 +52,15 @@ $$
 
 Statements are strings that actually generate output in an object file:
 
-FIXME: Comment only lines. Consider using empty like as Stmt.
-
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &Stmts              &&\pro &&Stmt \quad \T{eol}  \\
 &                   &&\or  &&Stmt \quad \T{eol} \quad Stmts  \\
-&                   &&\or  &&\T{eol}  \\
+&                   &&\or  &&Comment \quad \T{eol}  \\
 \\
 
 &Stmt               &&\pro &&CodeLine  \\
@@ -75,10 +73,10 @@ $$
 Statements are either assembly code, or data:
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &CodeLine           &&\pro &&Label \quad Instr \quad Comment  \\
 \\
@@ -100,10 +98,10 @@ $$
 Import statements can only be used before any other code:
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &ImportStmts        &&\pro &&ImportStmt \quad \T{eol}  \\
 &                   &&\or  &&ImportStmt \quad \T{eol} \quad ImportStmts  \\
@@ -122,10 +120,10 @@ $$
 Data definitions allow for value aliases and "hardcoded" binary data:
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &DataDefinition     &&\pro &&Identifier \quad \T{assignop} \quad Number  \\
 &                   &&\or  &&Label \quad DataDeclarator \quad NumberList  \\
@@ -147,10 +145,10 @@ $$
 Binary imports allow for binary data import (duh.) A filename is an identifier enclosed in double quotes.
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &BinaryImport       &&\pro &&\T{binimportop} \quad Filename  \\
 &                   &&\or  &&Label \quad \T{binimportop} \quad Filename  \\
@@ -168,10 +166,10 @@ $$
 Subroutines can define local labels; these are only in scope for the subroutine itself.
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &Subroutine         &&\pro &&\T{subroutinekeyword} \quad Identifier \quad \T{colon} \quad \T{eol}  \\
 &                   &&     &&Stmts  \\
@@ -184,10 +182,10 @@ $$
 Macros are weird (so far):
 
 $$
+\newcommand{\T}[1]{\texttt{#1}}
+\newcommand{\pro}{\quad \to \quad}
+\newcommand{\or}{\quad \; \mid \quad}
 \begin{alignat*}{3}
-\def\T#1{{\texttt{#1}}}
-\def\pro{{\quad \to \quad}}
-\def\or{{\quad \; \mid \quad}}
 
 &Macro              &&\pro &&\T{macrokeyword} \quad Identifier \quad \T{colon} \quad \T{eol}  \\
 &                   &&     &&Stmts  \\
